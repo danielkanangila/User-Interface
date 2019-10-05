@@ -64,19 +64,38 @@ h1, h2, h3, h4, h5 {
 }
 
 /* Your code starts here! */
-.main-container {
+body {
+	padding-top: 80px;
+}
+button {
+	background: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+.container {
 	width: 70%;
 	margin: 0 auto;
 }
 
 .navbar {
-	margin: 30px 0 50px;
+	position: fixed;
+	top: 0;
+	height: 53px;
+	width: 100%;
+	z-index: 1000;
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#211d21+0,000000+100 */
+	background: #211d21; /* Old browsers */
+	background: -moz-linear-gradient(top,  #211d21 0%, #000000 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #211d21 0%,#000000 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #211d21 0%,#000000 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#211d21', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
 }
 .navbar ul {
 	display: inline-block;
 	list-style-type: none;
 	text-align: center;
-	margin: 0px;
+	margin-top: 18px;
 	padding: 0px;
 }
 
@@ -87,17 +106,18 @@ h1, h2, h3, h4, h5 {
 }
 .navbar ul li a {
 	text-decoration: none;
-	color: grey;
+	color: #fff;
 	position: relative;
-	padding: 1rem;
+	padding: 1rem 1.5rem 1rem;
 	transition: .3s;
+	font-weight: 600;
 }
 .navbar ul li a::after {
 	content: '';
 	position: absolute;
 	width: 100%;
-	height: 2px;
-	background-color: #1E1F26;
+	height: 5px;
+	background-color: #ffffff;
 	left: 0;
 	bottom: 0;
 	transform: scaleX(0);
@@ -107,13 +127,19 @@ h1, h2, h3, h4, h5 {
 .navbar ul li a:hover::after {
 	transform: scaleX(1);
 }
-.navbar ul li a:hover {
-	color: #000;
-	font-weight: 600;
+.brand {
+	float: right;
+	background: #ffffff url("../img/logo.png") no-repeat;
+	background-size: 100px;
+	background-position: .5rem 1rem;
+	content: '';
+	width: 120px;
+	padding: 1rem 1rem 2.3rem;
 }
 .logo {
-	width: 150px;
+	width: 100px;
 	float: right;
+	margin-top: 15px;
 }
 
 .main-header {
@@ -134,16 +160,18 @@ h1, h2, h3, h4, h5 {
 }
 
 .header-alt-right {
-	width: 30%;
+	width: 33%;
+	height: 303px;
+	content: ' ';
 	float: right;
+	background-image: url('../img/header-img.png');
+	background-repeat: no-repeat;
+	background-size: 300px;
+	background-position: right;
 } 
 
 .header-alt-right img {
 	width: 300px;
-	float: right;
-}
-
-button {
 	border: none;
 	background: none;
 	outline: inherit;
@@ -171,7 +199,12 @@ button {
 
 .mid-page-accent {
 	display: block;
+	width: 100%;
+	height: 185px;
 	margin: 40px 0 40px;
+	background-image: url('../img/mid-page-accent.jpg');
+	background-repeat: no-repeat;
+	background-size: 100%;
 }
 
 .mid-page-accent img {
